@@ -12,7 +12,6 @@
   <include file="$(find aero_startup)/aero_move_base/launch/amcl.launch" />
 
   <!--- Run Move Base -->
-  <include file="$(find aero_startup)/aero_move_base/launch/move_base.launch">
-    <arg name="map_file" value="$(arg map_file)" />
+  <include file="$(find aero_startup)/aero_move_base/config/move_base.xml">
   </include>
 </launch>
