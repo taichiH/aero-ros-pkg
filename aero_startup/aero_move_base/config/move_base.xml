@@ -20,9 +20,11 @@
     <rosparam file="$(find aero_startup)/aero_move_base/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find aero_startup)/aero_move_base/config/global_costmap_params.yaml" command="load" ns="global_costmap" />
 
-    <!-- Load local navigation specific parameters -->
-    <rosparam file="$(find aero_startup)/aero_move_base/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find aero_startup)/aero_move_base/config/local_costmap_params.yaml" command="load" ns="local_costmap" />
+    <!-- local costmap setting -->
+    <rosparam file="$(find aero_startup)/aero_move_base/config/costmap_common.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find aero_startup)/aero_move_base/config/costmap_local.yaml" command="load" ns="local_costmap" />
+    <param name="local_costmap/width"  value="6.0"/>
+    <param name="local_costmap/height" value="6.0"/>
 
   </node>
 
