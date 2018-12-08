@@ -24,8 +24,8 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCL
 )ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <launch>
-  <arg name="map_file"
-       default="$(find aero_startup)/aero_move_base/maps/map.yaml"/>
+  <!-- <arg name="map_file" -->
+  <!--      default="$(find aero_startup)/aero_move_base/maps/map.yaml"/> -->
   <arg name="no_static_map" default="false"/>
 
    <!-- global planner type -->
@@ -50,7 +50,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCL
     <rosparam file="$(arg base_local_planner_param)" command="load"/>
 
     <!-- If you use keepout map, you can set map here -->
-    <rosparam file="$(arg map_file)" command="load"/>
+    <!-- <rosparam file="$(arg map_file)" command="load"/> -->
 
     <!-- observation sources located in costmap_common.yaml -->
     <rosparam
